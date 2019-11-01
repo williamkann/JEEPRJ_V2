@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <include-prelude>taglibs.jsp</include-prelude>
+        </jsp-property-group>
+    </jsp-config>
+    <welcome-file-list>
+        <welcome-file>Controller</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>jee.pj.servlet.Controller</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/Controller</url-pattern>
+    </servlet-mapping>
+        <context-param>
+        <param-name>loginAdmin</param-name>
+        <param-value>admin</param-value>
+    </context-param>
+    <context-param>
+        <param-name>passwordAdmin</param-name>
+        <param-value>admin</param-value>
+    </context-param>
+    <context-param>
+        <param-name>loginEmpl</param-name>
+        <param-value>empl</param-value>
+    </context-param>
+    <context-param>
+        <param-name>passwordEmpl</param-name>
+        <param-value>empl</param-value>
+    </context-param>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
