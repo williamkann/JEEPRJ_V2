@@ -6,7 +6,6 @@
 
 <%@page import="jee.pj.beans.User"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="jee.pj.beans.Employee"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

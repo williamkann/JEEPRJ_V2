@@ -6,7 +6,6 @@
 
 <%@page import="jee.pj.beans.User"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="jee.pj.beans.Employee"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -46,14 +45,14 @@
                 <tbody>
                     <c:forEach items="${EmployeeTable}" var="emp">
                     <tr>
-                        <td><input type="radio" name="selection" value="${emp.id}"/></td>
-                        <td>${emp.first_name}</td>
-                        <td>${emp.name}</td>
-                        <td>${emp.home_phone}</td>
-                        <td>${emp.mobile_phone}</td>
-                        <td>${emp.work_phone}</td>
+                        <td><input type="radio" name="selection" value="${emp.idemp}"/></td>
+                        <td>${emp.firstname}</td>
+                        <td>${emp.lastname}</td>
+                        <td>${emp.homephone}</td>
+                        <td>${emp.mobilephone}</td>
+                        <td>${emp.workphone}</td>
                         <td>${emp.address}</td>
-                        <td>${emp.postal_code}</td>
+                        <td>${emp.postalcode}</td>
                         <td>${emp.city}</td>
                         <td>${emp.email}</td>
                     </tr>
