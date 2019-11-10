@@ -55,7 +55,6 @@ public class Controller extends HttpServlet {
 
 
         employee = new Employees();
-
         
         String submit_btn = request.getParameter(FRM_SUBMIT);
         String selection = request.getParameter(FRM_SELECT);

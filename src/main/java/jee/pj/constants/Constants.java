@@ -32,9 +32,7 @@ public class Constants {
     public final static String JSP_HOMEPAGE_NOEMP = "/WEB-INF/JSP/noEmployees_homePage.jsp";
     public final static String JSP_HOMEPAGE_NOEMP_EMPL = "/WEB-INF/JSP/noEmployees_homePage_emp.jsp";
     public final static String JSP_GOODBYE = "/WEB-INF/JSP/goodbye.jsp";
-    
-    /* Properties file*/
-    public final static String PROP_DB = "/WEB-INF/db.properties";
+   
     
     /* Form attributes */
     public final static String FRM_LOGIN = "username";
@@ -45,11 +43,6 @@ public class Constants {
     public final static String FRM_DETAILACTION = "detailAction";
     public final static String FRM_LOG = "actionConnect";
     
-    /* SQL Requests */
-//    public final static String SQL_USERS = "SELECT * FROM USERS";
-//    public final static String SQL_ADDEMP = "INSERT INTO EMPLOYEES (LASTNAME, FIRSTNAME, HOMEPHONE, MOBILEPHONE, WORKPHONE, ADDRESS, POSTALCODE, CITY, EMAIL) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-//    public final static String SQL_UPDATEEMP = "UPDATE EMPLOYEES SET LASTNAME = ?, FIRSTNAME =?, HOMEPHONE = ?, WORKPHONE =? , MOBILEPHONE = ?, ADDRESS =?,POSTALCODE =?, CITY =?, EMAIL=?  WHERE IDEMP = ?";
-//    public final static String SQL_DELEMP = "DELETE FROM EMPLOYEES WHERE IDEMP = ?";
-//    public final static String SQL_GETEMP = "SELECT * FROM EMPLOYEES";
+    
 }
     
