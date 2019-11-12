@@ -21,9 +21,9 @@
     </head>
     <body> 
         
-        <h1>This is your ${user.login}'s page</h1>
+        <h1>This is your <c:out value="${user.login}"/>'s page</h1>
         <h2>List of Employees</h2>
-        <h3>Welcome ${user.login}</h3>
+        <h3>Welcome <c:out value="${user.login}"/></h3>
         
         <form action='Controller' method="post">
             <table class='table table-striped table-responsive-lg'>
@@ -46,15 +46,15 @@
                     <c:forEach items="${EmployeeTable}" var="emp">
                     <tr>
                         <td><input type="radio" name="selection" value="${emp.idemp}"/></td>
-                        <td>${emp.firstname}</td>
-                        <td>${emp.lastname}</td>
-                        <td>${emp.homephone}</td>
-                        <td>${emp.mobilephone}</td>
-                        <td>${emp.workphone}</td>
-                        <td>${emp.address}</td>
-                        <td>${emp.postalcode}</td>
-                        <td>${emp.city}</td>
-                        <td>${emp.email}</td>
+                        <td><c:out value="${emp.firstname}"/></td>
+                        <td><c:out value="${emp.lastname}"/></td>
+                        <td><c:out value="${emp.homephone}"/></td>
+                        <td><c:out value="${emp.mobilephone}"/></td>
+                        <td><c:out value="${emp.workphone}"/></td>
+                        <td><c:out value="${emp.address}"/></td>
+                        <td><c:out value="${emp.postalcode}"/></td>
+                        <td><c:out value="${emp.city}"/></td>
+                        <td><c:out value="${emp.email}"/></td>
                     </tr>
                     </c:forEach>
                 </tbody>

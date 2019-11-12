@@ -7,6 +7,7 @@ package jee.pj.beans;
 
 import jee.pj.entities.Employees;
 import java.util.List;
+import java.util.Objects;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -26,13 +27,21 @@ public class empBean {
     EntityManager em;
     
     boolean test;
-    
+     /**
+     *
+     * @return employees
+     */
     public List<Employees> getEmployees()
     {
         Query q = em.createNamedQuery("Employees.findAll");
         return q.getResultList();
     }
     
+    /**
+     *
+     * @param employeeId id of the employee we are searching for
+     * @return employee with the id requested
+     */
     public Employees searchEmployeeById(int employeeId)
     {
         Query q = em.createNamedQuery("Employees.findByIdemp").setParameter("idemp", employeeId);
@@ -40,12 +49,21 @@ public class empBean {
         return emp;
     }
     
+    /**
+     *
+     * @param employee employee to remove
+     */
     public void deleteEmployees(Employees employee)
     {
         Employees emp = em.find(Employees.class, employee.getIdemp());
         em.remove(emp);
     }
     
+    /**
+     *
+     * @param employee employee to check if he exists
+     * @return true if employee found
+     */
     public boolean checkEmployee(Employees employee)
     {
         test = false;
@@ -57,6 +75,11 @@ public class empBean {
         return test;
     }
     
+        
+    /**
+     *
+     * @param updateEmp employee we want to update information 
+     */
     public void updateEmployee(Employees updateEmp)
     {
   
@@ -74,13 +97,21 @@ public class empBean {
         em.persist(emp);
     }
     
+    /**
+     *
+     * @param employee employee to add to the list
+     */
     public void addEmployee(Employees employee)
     {
         Employees newEmployee = employee;
         em.persist(newEmployee);
     }
            
-    
+    /**
+     *
+     * @param employee employee's mail we want to check
+     * @return return true if the field is correctly filled
+     */
     public boolean valideEmployeeEmail(Employees employee)
     {
         test = true;
@@ -90,6 +121,12 @@ public class empBean {
         return test;
     }
     
+    
+    /**
+     *
+     * @param employee employee's work phone we want to check
+     * @return return true if the field is correctly filled
+     */
     public boolean valideEmployeeWorkPhone(Employees employee)
     {
         test = true;
@@ -99,6 +136,12 @@ public class empBean {
         return test;
     }
     
+    
+    /**
+     *
+     * @param employee employee's mobile phone we want to check
+     * @return return true if the field is correctly filled
+     */
     public boolean valideEmployeeMobPhone(Employees employee)
     {
         test = true;
@@ -108,6 +151,11 @@ public class empBean {
         return test;
     }
     
+    /**
+     *
+     * @param employee employee's home phone we want to check
+     * @return return true if the field is correctly filled
+     */
     public boolean valideEmployeeHomePhone(Employees employee)
     {
         test = true;
@@ -116,5 +164,9 @@ public class empBean {
         
         return test;
     }
+
+    
+    
+    
     
 }

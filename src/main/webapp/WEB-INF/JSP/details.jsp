@@ -15,47 +15,47 @@
         <link rel="stylesheet" type="text/css" media="all" href="css/stylesheet.css"/>
     </head>
     <body>
-        <h1>Details about ${employee.firstname} ${employee.lastname}</h1>
+        <h1>Details about <c:out value="${employee.firstname}"/> <c:out value="${employee.lastname}"/></h1>
             <div class='container details'>
                 <form method='post' action='Controller'>
                     <div form-group>
-                        <input type="hidden" value="${employee.idemp}" name='id'/>
+                        <input type="hidden" value="<c:out value="${employee.idemp}"/>" name='id'/>
                     </div>
                 <div>
                     <label for=name>Nom</label>
-                    <input type=text name=name value="${employee.lastname}" size='35'/>
+                    <input type=text name=name value="<c:out value="${employee.lastname}"/>" size='35'/>
                 </div>
                 <div>
                     <label for="first_name">Prénom</label>
-                    <input type="text" name="first_name" value="${employee.firstname}" size="35"/>
+                    <input type="text" name="first_name" value="<c:out value="${employee.firstname}"/>" size="35"/>
                 </div>
                 <div>
                     <label for="homePhone">Tél dom</label>
-                    <input type="text" name="homePhone" value="${employee.homephone}" size="35"/>
+                    <input type="text" name="homePhone" value="<c:out value="${employee.homephone}"/>" size="35"/>
                 </div>
                 <div>
                     <label for="mobilePhone">Tél mob</label>
-                    <input type="text" name="mobilePhone" value="${employee.mobilephone}" size="35"/>
+                    <input type="text" name="mobilePhone" value="<c:out value="${employee.mobilephone}"/>" size="35"/>
                 </div>
                 <div>
                     <label for="workPhone">Tél pro</label>
-                    <input type="text" name="workPhone" value="${employee.workphone}" size="35"/>
+                    <input type="text" name="workPhone" value="<c:out value="${employee.workphone}"/>" size="35"/>
                 </div>
                 <div>
                     <label for="address">Adresse</label>
-                    <input type="text" name="address" value="${employee.address}" size="35"/>
+                    <input type="text" name="address" value="<c:out value="${employee.address}"/>" size="35"/>
                 </div>
                 <div>
                     <label for="postalCode">Code Postal</label>   
-                    <input type="text" name="postalCode" value="${employee.postalcode}" size="35"/> 
+                    <input type="text" name="postalCode" value="<c:out value="${employee.postalcode}"/>" size="35"/> 
                 </div>
                 <div>
                     <label for="city">Ville</label>    
-                    <input type="text" name="city" value="${employee.city}" size="35"/>
+                    <input type="text" name="city" value="<c:out value="${employee.city}"/>" size="35"/>
                 </div>
                 <div>
                     <label for="email">Email</label>    
-                    <input type="text" name="email" value="${employee.email}" size="35"/>
+                    <input type="text" name="email" value="<c:out value="${employee.email}"/>" size="35"/>
                 </div>
                 <div class="error">
                     <c:out value="${ERR_MAIL}"/>

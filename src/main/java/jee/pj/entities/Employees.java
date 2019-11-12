@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package jee.pj.entities;
 
 import java.io.Serializable;
@@ -77,86 +72,156 @@ public class Employees implements Serializable {
     public Employees() {
     }
 
-    public Employees(Integer idemp) {
+    /**
+     * Constructor
+     * @param idemp Integer we want to set the employee's id with
+     */
+    public Employees(Integer idemp, String firstname, String lastname) {
         this.idemp = idemp;
+        this.lastname = lastname;
+        this.firstname = firstname;
     }
-
+    
+    /**
+     *
+     * @return employee's password
+     */
     public Integer getIdemp() {
         return idemp;
     }
-
+    
+    /**
+     *
+     * @param idemp Integer we want to set the employee's id with
+     */
     public void setIdemp(Integer idemp) {
         this.idemp = idemp;
     }
-
+    
+    /**
+     *
+     * @return employee's last name
+     */
     public String getLastname() {
         return lastname;
     }
-
+    /**
+     *
+     * @param lastname String we want to set the employee's last name with
+     */
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
-
+    /**
+     *
+     * @return employee's first name
+     */
     public String getFirstname() {
         return firstname;
     }
-
+    /**
+     *
+     * @param firstname String we want to set the employee's first name with
+     */
     public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
-
+    /**
+     *
+     * @return employee's home phone
+     */
     public String getHomephone() {
         return homephone;
     }
-
+    /**
+     *
+     * @param homephone Phone number we want to set the employee's home phone with
+     */
     public void setHomephone(String homephone) {
         this.homephone = homephone;
     }
-
+    /**
+     *
+     * @return employee's mobile phone
+     */
     public String getMobilephone() {
         return mobilephone;
     }
 
+   /**
+     *
+     * @param mobilephone Phone number we want to set the employee's mobile phone with
+     */
     public void setMobilephone(String mobilephone) {
         this.mobilephone = mobilephone;
     }
-
+    /**
+     *
+     * @return employee's work phone
+     */
     public String getWorkphone() {
         return workphone;
     }
-
+    /**
+     *
+     * @param workphone Phone number we want to set the employee's work phone with
+     */
     public void setWorkphone(String workphone) {
         this.workphone = workphone;
     }
-
+    /**
+     *
+     * @return employee's address
+     */
     public String getAddress() {
         return address;
     }
-
+    /**
+     *
+     * @param address Address we want to set the employee's address with
+     */
     public void setAddress(String address) {
         this.address = address;
     }
-
+    /**
+     *
+     * @return employee's postal code
+     */
     public String getPostalcode() {
         return postalcode;
     }
-
+    /**
+     *
+     * @param postalcode postal code we want to set the employee's postal code with
+     */
     public void setPostalcode(String postalcode) {
         this.postalcode = postalcode;
     }
-
+    /**
+     *
+     * @return employee's city
+     */
     public String getCity() {
         return city;
     }
-
+    /**
+     *
+     * @param city City's name we want to set employee's city field with
+     */
     public void setCity(String city) {
         this.city = city;
     }
-
+    /**
+     *
+     * @return employee's email
+     */
     public String getEmail() {
         return email;
     }
-
+    /**
+     *
+     * @param email String we want to set the employee's email with
+     */
     public void setEmail(String email) {
         this.email = email;
     }

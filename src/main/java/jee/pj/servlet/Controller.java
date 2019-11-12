@@ -31,10 +31,6 @@ public class Controller extends HttpServlet {
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
      */
     
 
@@ -46,9 +42,29 @@ public class Controller extends HttpServlet {
     
     Employees employee;
     static boolean btn;
+    /**
+     * Variable which redirects the user on the specific jsp page 'detail' depending on the login of the user (admin or empl)
+     */
     public static String CON_DETAILS;
+    /**
+     * Variable which redirects the user on the specific jsp page 'homepage' depending on the login of the user (admin or empl) ; homePage page is showing to the user the list of employees
+     */
     public static String CON_HOMEPAGE;
+     /**
+     * Variable which redirects the user on the specific jsp page 'detail' depending on the login of the user (admin or empl) ; noEmployees_homePage is a specific page of homePage which is used when there's no employees
+     */
     public static String CON_HOMEPAGE_NOEMP;
+    
+    
+    
+   /**
+     *
+     * @param request servlet's request
+     * @param response servlet's response
+     * @throws ServletException
+     * @throws IOException
+     * @throws SQLException
+     */
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException, ClassNotFoundException {

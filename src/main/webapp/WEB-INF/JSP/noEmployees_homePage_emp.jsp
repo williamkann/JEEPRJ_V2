@@ -17,9 +17,9 @@
         <link rel="stylesheet" type="text/css" media="all" href="css/stylesheet.css"/>
     </head>
     <body> 
-        <h1>This is your ${user.login}'s page</h1>
+        <h1>This is your <c:out value="${user.login}"/>'s page</h1>
         <h2>List of Employees</h2>
-        <h3>Welcome ${user.login}</h3>
+        <h3>Welcome <c:out value="${user.login}"/></h3>
        
         <form action='Controller' method='post'>
 
